@@ -27,6 +27,10 @@ struct FruitsView: View {
                     }
                 }
             }
+            
+            Button("Add Fruit") {
+                fruitController.addFruit(Fruit(id: 4, name: "Banana", price: 0.5, quantity: 100))
+            }
         }
         .padding()
     }

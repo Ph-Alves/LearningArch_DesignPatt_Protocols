@@ -16,11 +16,11 @@ class FruitController: ObservableObject {
     @Published var fruits: [Fruit] = []
     
     init() {
+        repository.populate()
         fruits = getFruits()
     }
     
     func getFruits() -> [Fruit] {
-        repository.populate()
         let repositoryFruits = repository.getFruits()
         let ordenedFruits = strategy.sort(fruits: repositoryFruits)
         fruits = ordenedFruits
@@ -28,7 +28,7 @@ class FruitController: ObservableObject {
     }
     
     func addFruit(_ fruit: Fruit) {
-        repository.add(fruit)
+        fruits.append(fruit)
         let ordenedFruits = strategy.sort(fruits: fruits)
         fruits = ordenedFruits
     }

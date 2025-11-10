@@ -1,7 +1,7 @@
 # Learning About:
 
 - Design Patterns and where to use it
-- Protocolos and POP
+- Protocols and POP
 - Architecture and how to use it
 - SOLID principles
 
